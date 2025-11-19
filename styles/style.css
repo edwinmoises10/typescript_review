@@ -1,0 +1,15 @@
+:root {
+  --color-backgorund-body: #4f8fbaa7;
+  --color-text-primary: #ffffff;
+}
+
+body {
+  background-color: var(--color-backgorund-body);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rootDesign {
+  color: var(--color-text-primary);
+}
