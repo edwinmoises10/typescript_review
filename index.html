@@ -3,25 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
 
     <link rel="stylesheet" href="./styles/style.css" />
-    <script defer src="./dist/main.js"></script>
+    <script type="module" src="./dist/main.js"></script>
 
     <title>TypeScript</title>
   </head>
   <body>
     <header>
-        <h1>Hello TypeScript</h1>
+      <h1>Hello TypeScript</h1>
     </header>
 
     <main>
-
-        <section>
-            <div>
-                <p class="rootDesign" id="root"></p>
-            </div>
-        </section>
-
+      <section>
+        <div>
+          <p class="rootDesign" id="root"></p>
+        </div>
+        <hr />
+        <div>
+          <input
+            id="userInformation"
+            placeholder="Type your name"
+            type="text"
+          />
+          <button id="saveInformation">Save Information</button>
+          <table>
+            <tbody id="storeDataLS"></tbody>
+          </table>
+        </div>
+      </section>
     </main>
 
     <footer></footer>
