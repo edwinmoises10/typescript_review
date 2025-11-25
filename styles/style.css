@@ -13,3 +13,63 @@ body {
 .rootDesign {
   color: var(--color-text-primary);
 }
+
+.dom {
+  background-color: rgb(90, 206, 202);
+  padding: 30px;
+}
+
+.ispContainer {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.ispContainer label {
+  font-style: italic;
+  padding: 6px;
+}
+.ispContainer input {
+  font-style: italic;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid white;
+}
+.ispContainer button{
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  align-items: center;
+  text-align: center;
+
+}
+
+.styledTable {
+  margin-top: 20px;
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+.styledTable th,
+.styledTable td {
+  padding: 14px 18px;
+  text-align: left;
+}
+
+.styledTable th {
+  background: #1f2937; /* gris oscuro */
+  color: #fff;
+  font-weight: 600;
+}
+
+.styledTable tr:not(:first-child):hover {
+  background: #f9fafb;
+}
+
+.styledTable tr:nth-child(even) {
+  background: #f3f4f6;
+}

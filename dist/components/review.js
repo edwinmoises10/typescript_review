@@ -44,3 +44,11 @@ if (userData && saveData) {
 // --- CORRECCIÓN 2: Renderizado Inicial ---
 // Ejecutamos esto para que al dar F5 aparezcan los datos guardados
 result();
+const clearAll = document.getElementById("clearAll");
+if (clearAll) {
+    clearAll.onclick = () => {
+        user_container.length = 0;
+        result();
+        console.log(`Sin data - Array:  ${user_container.length} Length`);
+    };
+}

@@ -2,3 +2,7 @@
 import "./components/variables.js";
 import "./components/types.js";
 import "./components/review.js"
+import "./components/functions.js"
+import "./components/elementosDOM.js"
+import "./components/genericos.js"
+import "./components/review2.js"

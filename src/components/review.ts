@@ -15,12 +15,13 @@ console.log(usernameID);
 // Nota: Asumo que el HTML está presente en tu index.html
 
 const userData = document.getElementById("userInformation") as HTMLInputElement;
-const saveData = document.getElementById("saveInformation") as HTMLButtonElement;
+const saveData = document.getElementById(
+  "saveInformation"
+) as HTMLButtonElement;
 const storeDataLS = document.getElementById("storeDataLS");
 
 // Recuperación de datos
 const storeData = localStorage.getItem("userInfo");
-
 type user = string[];
 let user_container: user = storeData ? JSON.parse(storeData) : [];
 
@@ -35,7 +36,9 @@ const result = () => {
       message += `
         <tr>
           <th> Name </th>
-          <td>${person.charAt(0).toUpperCase() + person.slice(1).toLowerCase()} </td>
+          <td>${
+            person.charAt(0).toUpperCase() + person.slice(1).toLowerCase()
+          } </td>
         </tr>
       `;
     });
@@ -50,12 +53,24 @@ if (userData && saveData) {
     console.log(user_container);
     userData.value = "";
     localStorage.setItem("userInfo", JSON.stringify(user_container));
-    
+
     // Llamada reactiva al actualizar
-    result(); 
+    result();
   };
 }
 
 // --- CORRECCIÓN 2: Renderizado Inicial ---
 // Ejecutamos esto para que al dar F5 aparezcan los datos guardados
 result();
+
+const clearAll = document.getElementById("clearAll") as HTMLButtonElement;
+
+if(clearAll){
+  clearAll.onclick = () => {
+    user_container.length=0
+    result()
+    console.log(`Sin data - Array:  ${user_container.length} Length`);
+    
+  };
+  
+}

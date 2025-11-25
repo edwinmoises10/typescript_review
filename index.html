@@ -28,12 +28,52 @@
             type="text"
           />
           <button id="saveInformation">Save Information</button>
-          <hr>
+          <hr />
+          <button id="clearAll">ClearAll</button>
           <table>
             <h2>Results</h2>
             <tbody id="storeDataLS"></tbody>
           </table>
         </div>
+      </section>
+
+      <hr />
+      <section class="dom">
+        <h1 class="title">Hola a todos</h1>
+        <label for="username">Username</label>
+        <input type="text" id="username" placeholder="Type your name" />
+      </section>
+      <hr />
+
+      <section class="ispContainer">
+        <label for="ispName">ISP Name</label>
+        <input
+          type="text"
+          id="ispName"
+          placeholder="Internet Service Provider Name"
+        />
+
+        <label for="downloadSpeed">Download Seed (Mbps)</label>
+        <input type="number" id="downloadSpeed" placeholder="Download Speed" />
+
+        <label for="latencyMs">Latency (ms)</label>
+        <input type="text" id="latencyMs" placeholder="Latency (ms)" />
+
+        <button id="getInformation">Record Test </button>
+
+      </section>
+
+      <section class="styledTable">
+
+        <table>
+          <tr>
+            <th>ISP</th>
+            <th>Download Speed (Mbps)</th>
+            <th>Latency (ms)</th>
+            <th>Status</th>
+          </tr>
+        </table>
+
       </section>
     </main>
 
