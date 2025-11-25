@@ -2,7 +2,14 @@
   "compilerOptions": {
     "target": "ES6",
     "module": "ES6",
-    // "module": "commonjs",
+    
+    // --- CORRECCIÓN PARA SWEETALERT2 (Y OTRAS LIBRERÍAS) ---
+    // La estrategia "node" le indica al compilador que busque los imports 
+    // dentro de la carpeta 'node_modules', tal como lo hace Node.js.
+    // Sin esto, TS no sabe dónde encontrar la definición de 'sweetalert2'.
+    "moduleResolution": "node",
+    // --------------------------------------------------------
+
     "rootDir": "./src",
     "outDir": "./dist",
     "strict": true,

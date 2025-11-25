@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
 
+    <script type="importmap">
+      {
+        "imports": {
+          "sweetalert2": "./node_modules/sweetalert2/dist/sweetalert2.esm.all.js"
+        }
+      }
+    </script>
+
     <link rel="stylesheet" href="./styles/style.css" />
     <script type="module" src="./dist/main.js"></script>
 
@@ -59,21 +67,25 @@
         <label for="latencyMs">Latency (ms)</label>
         <input type="text" id="latencyMs" placeholder="Latency (ms)" />
 
-        <button id="getInformation">Record Test </button>
-
+        <button id="getInformation">Record Test</button>
       </section>
 
       <section class="styledTable">
-
         <table>
-          <tr>
-            <th>ISP</th>
-            <th>Download Speed (Mbps)</th>
-            <th>Latency (ms)</th>
-            <th>Status</th>
-          </tr>
+          <thead>
+            <tr>
+              <th>ISP</th>
+              <th>Download Speed (Mbps)</th>
+              <th>Latency (ms)</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="testData"></tbody>
         </table>
+      </section>
 
+      <section>
+        <button id="btClearDB" class="bt-clearDB">Clear Db</button>
       </section>
     </main>
 
